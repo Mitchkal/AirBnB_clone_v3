@@ -69,52 +69,27 @@ class FileStorage:
         """call reload() method for deserializing the JSON file to objects"""
         self.reload()
 
-<<<<<<< HEAD
-#task 2: improve stoarage
-def get(self, cls, id):
-        """
-        gets specific object
-        :param cls: class
-        :param id: id of instance
-        :return: object or None
-        """
-        all_class = self.all(cls)
-
-        for obj in all_class.values():
-            if id == str(obj.id):
-                return obj
-
-        return None
-
-    def count(self, cls=None):
-        """
-        count of instances
-        :param cls: class
-        :return: number of instances
-        """
-
-        return len(self.all(cls))
-=======
     def get(self, cls, id):
         """retrieves one object from storage"""
         if cls.__name__ in classes and id and type(id) is str:
             try:
-                _objects = self.__objects.get(cls + '.' + id, None)
+                _objects = self.all(cls)
                 # for item in _objects:
                 # print("items include {}".format(item))
-                return (_objects)
+                for obj in _objects.values():
+                    if id == str(obj.id):
+                        return (obj)
                 # for item in self.__objects.values():
                 # if item.id == id:
                 # return (item)
             except Exception as e:
-                print("Exception found: {}".format(e))
                 return (None)
 
     def count(self, cls=None):
         """counts number of objects in storage"""
-        count = 0
+        return len(self.all(cls))
 
-        try:
+    """try:
             if cls is not None:
                 # objects = self.__objects.get(cls, [])
                 for j in self.__objects.keys():
@@ -125,5 +100,4 @@ def get(self, cls, id):
                 count = len(self.__objects)
             return (count)
         except Exception as e:
-            return (0)
->>>>>>> development
+            return (0)"""

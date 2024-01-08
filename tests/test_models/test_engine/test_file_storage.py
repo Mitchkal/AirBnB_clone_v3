@@ -119,9 +119,8 @@ class TestFileStorage(unittest.TestCase):
             js = f.read()
         self.assertEqual(json.loads(string), json.loads(js))
 
-<<<<<<< HEAD
-# task 2: improve storage tests
- def test_get(self):
+    # task 2: improve storage tests
+    def test_get(self):
         """test that get returns an object of a given class by id."""
         storage = models.storage
         obj = State(name='Michigan')
@@ -158,7 +157,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertGreater(storage.count(), storage.count(State))
         with self.assertRaises(TypeError):
             storage.count(State, 'op')
-=======
+
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_storage_get(self):
         """tests instance in storage"""
@@ -179,4 +178,3 @@ class TestFileStorage(unittest.TestCase):
         self.assertIsinstance(state_count, int)
         # ensure all count is more than object count
         self.assertGreaterEqual(all_items, state_count)
->>>>>>> development
