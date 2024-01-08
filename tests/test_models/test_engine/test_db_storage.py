@@ -68,7 +68,7 @@ test_db_storage.py'])
                             "{:s} method needs a docstring".format(func[0]))
 
 #task 2: improve storage test
-def test_get(self):
+    def test_get(self):
         """test that get returns an object of a given class by id."""
         storage = models.storage
         obj = State(name='Michigan')

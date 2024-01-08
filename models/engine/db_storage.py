@@ -21,6 +21,7 @@ classes = {"Amenity": Amenity, "City": City,
 
 
 class DBStorage:
+
     """interaacts with the MySQL database"""
     __engine = None
     __session = None
@@ -76,7 +77,7 @@ class DBStorage:
         self.__session.remove()
 
 #task 2: Improve storage
-   def get(self, cls, id):
+    def get(self, cls, id):
         """
         fetches specific object
         :param cls: class of object as string
@@ -93,8 +94,8 @@ class DBStorage:
 
     def count(self, cls=None):
         """
-        count of how many instances of a class
-        :param cls: class name
-        :return: count of instances of a class
-        """
+	count of how many instances of a class
+	:param cls: class name
+	:return: count of instances of a class
+	"""
         return len(self.all(cls))

@@ -70,7 +70,7 @@ class FileStorage:
         self.reload()
 
 #task 2: improve stoarage
-def get(self, cls, id):
+    def get(self, cls, id):
         """
         gets specific object
         :param cls: class

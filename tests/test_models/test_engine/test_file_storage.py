@@ -115,7 +115,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(json.loads(string), json.loads(js))
 
 # task 2: improve storage tests
- def test_get(self):
+    def test_get(self):
         """test that get returns an object of a given class by id."""
         storage = models.storage
         obj = State(name='Michigan')
