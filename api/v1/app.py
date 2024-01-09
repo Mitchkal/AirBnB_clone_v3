@@ -27,6 +27,7 @@ def not_found_error(error):
     response.headers['Connection'] = 'close'
     return response
 
+
 @app.errorhandler(400)
 def error_400(error):
     '''Handles the 400 HTTP error code.'''
