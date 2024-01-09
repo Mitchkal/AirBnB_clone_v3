@@ -28,11 +28,7 @@ def get_place_by_city(city_id):
 def get_place(place_id=None):
     """get place by id"""
 
-    # print("Full request: ", request)
     place = storage.get(Place, place_id)
-    # print('State id is {}'.format(state_id))
-    # print('State id is type {}'.format(type(state_id)))
-    # print('State is {}'.format(state))
 
     if place is None:
         abort(404)

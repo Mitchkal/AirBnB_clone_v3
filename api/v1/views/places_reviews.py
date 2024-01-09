@@ -28,11 +28,7 @@ def get_reviews_by_place(place_id):
 def get_review(review_id=None):
     """get review by id"""
 
-    # print("Full request: ", request)
     review = storage.get(Review, review_id)
-    # print('State id is {}'.format(state_id))
-    # print('State id is type {}'.format(type(state_id)))
-    # print('State is {}'.format(state))
 
     if review is None:
         abort(404)

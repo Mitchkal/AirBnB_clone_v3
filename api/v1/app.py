@@ -24,7 +24,7 @@ def not_found_error(error):
     """handles 404 errors"""
     response = jsonify({'error': 'Not found'})
     response.status_code = 404
-    # response.headers['Connection'] = 'close'
+    response.headers['Connection'] = 'close'
     return response
 
 @app.errorhandler(400)
