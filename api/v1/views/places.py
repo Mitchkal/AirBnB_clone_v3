@@ -5,7 +5,6 @@ handles all default Restful API actions
 from flask import Flask, jsonify, request, abort
 from models import storage
 from models.city import City
-from models.state import State
 from models.place import Place
 from . import app_views
 import uuid

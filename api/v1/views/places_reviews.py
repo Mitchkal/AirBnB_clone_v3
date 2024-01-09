@@ -4,8 +4,8 @@ handles all default Restful API actions
 """
 from flask import Flask, jsonify, request, abort
 from models import storage
-from models.review import Review
 from models.place import Place
+from models.review import Review
 from . import app_views
 import uuid
 
